@@ -21,35 +21,66 @@
             <style type="text/css">
                 * { padding: 0; margin: 0;}
                 body { font-family: sans-serif; }
-                a { text-decoration: none;color: #000; padding-left:5px }
-                li { list-style-type: none; }
+                a { text-decoration: none;color: #000; padding-left:5px; }
+                nav li { list-style-type: none;}
                 
-                nav { width: 100%; text-align: center;}
+                nav { width: 100%;}
                 nav a {
                     display:block;
                     padding: 15px 0;
                     color: #F0EADC;
+                    vertical-align:middle;
+                    text-align:center-left;
                     border-bottom: 1px solid #CCC
                 }
-            nav li:first-child a{ border-bottom: 3px solid #CCC;border-top:none;text-align:left; padding-left: 5px;}
                 nav li:last-child a{ border-top: 2px solid #CCC;border-bottom: none; }
                 nav a:hover { background: #CCC; color:  #FFF; }
+                #add_event {
+                    background-color:#B0C4DE;
+                    border: none;
+                    cursor:pointer;
+                    color:#FFF;
+                    padding: 5px 5px;
+                    position: fixed;
+                    bottom: 0px;
+                    right: 0px;
+                }
+            #add_event:hover {
+                border:none;
+                box-shadow: 0px 0px 1px #;
+            }
+            #account {
+                position:fixed;
+                top: 0px;
+                right: 0px;
+                background-color:#B0C4DE;
+                border:none;
+                padding: 5px 5px;
+            }
             </style>
-            <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-            
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
     </head>
     <body class="menu">
         <header>
-            <a href="#" class="menu-toggle">&#9776;</a>
+            <a href="#" class="menu-toggle" style="font-size:16px">&#9776;</a>
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="account"><i class="material-icons" style="font-size:24px">account_circle</i>
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+            <button type="button" onclick="alert('Add Event')" style="float:right;" id = "add_event" name = "Add Event"><i class="material-icons" style="font-size:36px">add_box</i></button>
             <nav class="menu-side">
                 <ul>
-                    <li><a href="#"><i class="fa fa-user" style="font-size:24px"></i> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Account</a></li>
-                    <li><a href="#">My Trails</a></li>
-                    <li><a href="#">Following</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Popular</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="#"><i class="material-icons" style="font-size:36px">book</i> My Trails</a></li>
+                    <li><a href="#"><i class="material-icons" style="font-size:36px">people</i> Following</a></li>
+                    <li><a href="#"><i class="material-icons" style="font-size:36px">map</i> Explore</a></li>
+                    <li><a href="#"><i class="material-icons" style="font-size:36px">local_play</i> Popular</a></li>
                 </ul>
 
             </nav>
