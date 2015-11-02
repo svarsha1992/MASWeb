@@ -1,0 +1,43 @@
+.menu {
+    overflow-x:hidden;
+    position:relative;
+    background-color:#B0C4DE;
+    
+    left:0px;
+}
+.map {
+    height:90vh;
+    width:95vw;
+    background-color:#CCC;
+    position:absolute;
+    top: 30px;
+    left: 20px;
+    border: solid 1px;
+    
+}
+.menu-open {
+    left:231px;
+}
+.menu-open .menu-side {
+    left:0;
+
+
+}
+.menu-side,
+.menu {
+    transition: left 0.2s ease;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+.menu-side {
+    background-color:#6495ED;
+    color:#fff;
+    position:fixed;
+    top:0;
+    left: -231px;
+    width:210px;
+    height:100%;
+    padding:10px;
+}
